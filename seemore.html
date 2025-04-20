@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See More - World Class Curtain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+            z-index: 1;
+        }
+
+        .hero h2 {
+            z-index: 2; /* Ensure text is above the overlay */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+        }
+
+        .hero p {
+            z-index: 2; /* Ensure text is above the overlay */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+        }
+
+        .hero button {
+            z-index: 2; /* Ensure button is above the overlay */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        .hero button:hover {
+            background-color: rgba(26, 27, 75, 0.8); /* Darker background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1a1b4b',
+                        'secondary': '#e6f3ff',
+                    }
+                }
+            }
+        }
+
+        // JavaScript to toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+<a href="index.html" class="flex items-center text-2xl font-playfair font-bold text-primary">
+    <img src="logoo.png" alt="World Class Curtain Logo" class="h-10 mr-2"> <!-- Adjust the height as needed -->
+    World Class Curtain
+</a>            <div class="md:hidden">
+                <img src="menuuu.png" alt="Menu Button" class="menu-btn cursor-pointer" id="menu-btn" onclick="toggleMenu()">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-primary">HOME</a>
+                <a href="seemore.html" class="hover:text-primary">MORE</a>
+                <a href="index.html" class="hover:text-primary">ABOUT</a>
+                <a href="contact.html" class="hover:text-primary">CONTACT</a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6">
+            <a href="index.html" class="block hover:text-primary">HOME</a>
+            <a href="seemore.html" class="block hover:text-primary">MORE</a>
+            <a href="index.html" class="block hover:text-primary ">ABOUT</a>
+            <a href="contact.html" class="block hover:text-primary">CONTACT</a>
+        </div>
+    </nav>
+    
+      <!-- Hero Section -->
+    <section class="hero bg-secondary py-16 md:py-24 bg-cover bg-center" style="background-image: url('bigi1.jpg');">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-2xl relative z-10">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-yellow-500 mb-4">Curtains That<br/>Reflect your Style</h2>
+                <p class="text-yellow-500 mb-8">Explore The Elegance of World - Class<br/>Curtains, where Luxury Meets<br/>Functionality.</p>
+                <button class="bg-primary text-white px-8 py-3 rounded hover:bg-opacity-90 transition" onclick="window.location.href='seemore.html'">
+    Explore Now
+</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- See More Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl font-playfair font-bold text-primary text-center mb-4">More Products</h2>
+            <p class="text-center text-gray- 600 mb-12">Explore our extended collection of curtains that suit every style and preference.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn4.jpg" alt="Chic Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Chic Patterned Curtain</h3>
+                    <p class="text-gray-600 mb-2">A stylish patterned curtain that adds a modern touch to your living space.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.5</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn5.jpg" alt="Elegant Sheer Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Elegant Sheer Curtain</h3>
+                    <p class="text-gray-600 mb-2">A delicate sheer curtain that allows natural light to filter through beautifully.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.8</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn6.jpg" alt="Luxury Blackout Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Luxury Blackout Curtain</h3>
+                    <p class="text-gray-600 mb-2">A premium blackout curtain that provides complete privacy and light control.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>5.0</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn7.jpg" alt="Modern Geometric Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Modern Geometric Curtain</h3>
+                    <p class="text-gray-600 mb-2">A contemporary geometric design that enhances your decor.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.7</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn8.jpg" alt="Classic Velvet Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb -2">Classic Velvet Curtain</h3>
+                    <p class="text-gray-600 mb-2">Luxurious velvet fabric that adds warmth and elegance to any room.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.9</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn9.jpg" alt="Rustic Linen Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Rustic Linen Curtain</h3>
+                    <p class="text-gray-600 mb-2">Natural linen fabric that brings a rustic charm to your home.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.6</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn10.jpg" alt="Bohemian Print Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Bohemian Print Curtain</h3>
+                    <p class="text-gray-600 mb-2">A vibrant bohemian print that adds a pop of color to your space.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.4</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn11.jpg" alt="Coastal Stripe Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Coastal Stripe Curtain</h3>
+                    <p class="text-gray-600 mb-2">A fresh coastal stripe design perfect for beach houses.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.8</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 9 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn12.jpg" alt="Artistic Abstract Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Artistic Abstract Curtain</h3>
+                    <p class="text-gray-600 mb-2">An artistic abstract design that makes a bold statement.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.3</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 10 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow -xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn13.jpg" alt="Vintage Floral Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Vintage Floral Curtain</h3>
+                    <p class="text-gray-600 mb-2">A charming vintage floral pattern that adds elegance to any room.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.5</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 11 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn14.jpg" alt="Classic Striped Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Classic Striped Curtain</h3>
+                    <p class="text-gray-600 mb-2">Timeless stripes that bring a classic touch to your decor.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.6</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 12 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn15.jpg" alt="Elegant Lace Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Elegant Lace Curtain</h3>
+                    <p class="text-gray-600 mb-2">Delicate lace that adds a touch of sophistication to your windows.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.9</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 13 -->
+                <div class="bg-gray-100 p-4 rounded-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-64 rounded-lg mb-4 overflow-hidden">
+                        <img src="ctdsgn16.jpg" alt="Contemporary Solid Curtain" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-medium mb-2">Contemporary Solid Curtain</h3>
+                    <p class="text-gray-600 mb-2">A solid color curtain that complements any modern interior.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold"></span>
+                        <div class="flex items-center">
+                            <span>4.7</span>
+                            <i class="fas fa-star text-yellow-400 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">World Class Curtain</h3>
+                    <p class="text-gray-300">Elevate your space with our premium collection of curtains designed for modern living.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="seemore.html" class="text-gray-300 hover:text-white">More</a></li>
+                        <li><a href="accessories.html" class="text-gray-300 hover:text-white">Accessories</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="m.me/miratravelblog" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 World Class Curtain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

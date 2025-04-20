@@ -1,0 +1,154 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* ==== Global ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.active {
+    color: whitesmoke;
+    text-decoration: underline;
+    font-weight: bold; /* Changed 'hold' to 'bold' */
+}
+
+/* Set html and body to full height */
+html, body {
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fccd03;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin: 0 30px; /* Merged margin into one definition */
+    transition: max-height 0.3s ease; /* Added transition for smooth opening */
+    overflow: hidden;
+    max-height: 0; /* Initially hide the nav links */
+    background: transparent; /* Set background to transparent */
+}
+
+.nav-links.active {
+    max-height: 300px; /* Adjust based on the number of links */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+header {
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    background-image: url('bigi1.jpg');
+    background-position: center; /* Center the image */
+    background-size: cover; /* Cover the entire area */
+    display: flex; /* Flexbox for alignment */
+    align-items: flex-end;
+    justify-content: center; /* Center content */
+}
+
+.header-content {
+    margin-bottom: 150px;
+    color: #fceb03;
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 4vmin;
+}
+
+.text-center {
+    text-align: center; /* Center the text */
+}
+
+.mt-12 {
+    margin-top: 3rem; /* Adjust the margin as needed */
+}
+
+.button-custom {
+    border: 2px solid #007bff; /* Primary color */
+    color: #007bff; /* Primary color */
+    padding: 1rem 2rem; /* Padding for the button */
+    border-radius: 0.5rem; /* Rounded corners */
+    background-color: transparent; /* Transparent background */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.button-custom:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+.button-custom i {
+    margin-left: 0.5rem; /* Space between text and icon */
+}
+
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.header-content h1 {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Event */
+section {
+    width: 80%;
+    margin: 80px auto;
+}
+
+
+
+/* Mobile device */
+@media only screen and (max-width: 850px) {
+    .menu-btn {
+        display: block;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: transparent; /* You can change this to transparent if needed */
+        transition: all 0.5s ease; /* Fixed syntax */
+    }
+    .nav-links li {
+        margin: 30px auto;
+    }
+}
